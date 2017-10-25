@@ -15,7 +15,7 @@ public class Customer {
     @Column(name = "CUSTOMER_ID")
     private Long customerId;
 
-    @Column(name = "CUSTOMER_NAME")
+    @Column(name = "CUSTOMER_NAME",unique = true)
     private String customerName;
 
 
