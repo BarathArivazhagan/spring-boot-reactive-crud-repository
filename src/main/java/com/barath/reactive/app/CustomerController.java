@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(value = "/customer",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class CustomerController {
 
     private CustomerService customerService;
@@ -17,14 +17,14 @@ public class CustomerController {
     }
 
 
-    @PostMapping(value = "/create")
+    @PostMapping(value = "/customer")
     public Mono<Customer> createCustomer(@RequestBody Customer customer){
 
         return customerService.saveCustomer(customer);
 
     }
 
-    @GetMapping(value = "/getCustomers")
+    @GetMapping(value = "/customers")
     public Flux<Customer> getCustomers(){
         return customerService.getCustomers();
     }

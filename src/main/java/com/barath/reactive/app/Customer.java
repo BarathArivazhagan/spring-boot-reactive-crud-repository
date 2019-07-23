@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "REACTIVE_CUSTOMER")
+@Table(name = "CUSTOMER")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer {
 

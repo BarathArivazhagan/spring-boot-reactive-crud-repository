@@ -1,19 +1,20 @@
 package com.barath.reactive.app;
 
+import java.lang.invoke.MethodHandles;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.lang.invoke.MethodHandles;
-import java.util.List;
 
 @Service
 public class CustomerService {
 
     private static final Logger logger= LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
     public CustomerService(CustomerRepository customerRepository){
         this.customerRepository=customerRepository;
